@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create();
 
-var DEST = 'build/';
+var DEST = 'assets/';
+
+
 
 gulp.task('scripts', function() {
     return gulp.src('src/js/*.js')
