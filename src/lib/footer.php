@@ -1,5 +1,0 @@
-<!-- START FOOTER -->
-<footer>
-    
-</footer>
-<!-- END FOOTER -->

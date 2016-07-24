@@ -1,14 +1,15 @@
+</div>
+<!-- /page content -->
 <!-- footer content -->
 <footer>
-  <div class="pull-right">
-    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-  </div>
-  <div class="clearfix"></div>
+    <div class="pull-right">
+        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+    </div>
+    <div class="clearfix"></div>
 </footer>
 <!-- /footer content -->
 </div>
 </div>
-
 <!-- jQuery -->
 <script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
@@ -18,6 +19,13 @@
 <!-- NProgress -->
 <script src="../assets/plugins/nprogress/nprogress.js"></script>
 
+<?php
+if (!empty($config['scripts']) && is_array($config['scripts'])) {
+    foreach ($config['scripts'] as $script):
+        echo '<script src="' . $script['src'] . '"></script>';
+    endforeach;
+}
+?>
 <!-- Custom Theme Scripts -->
 <script src="../assets/js/custom.min.js"></script>
 </body>

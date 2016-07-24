@@ -54,11 +54,20 @@ gulp.task('browser-sync', function () {
         startPath: './dist/index.html'
     });
 });
+gulp.task('reload',function(){
+    browserSync.reload();
+})
 gulp.task('watch', function () {
     // Watch .html files
-    gulp.watch('dist/*.html', browserSync.reload);
+    gulp.watch('dist/*.html', ['reload']);
+    // Watch .js files
+    gulp.watch('src/js/*.js', ['scripts']);
+    // Watch .scss files
+    gulp.watch('src/scss/*.scss', ['sass', 'sass-minify']);
+});
+gulp.task('php-watch',function(){
     // Watch .php files
-    gulp.watch('src/php/**/*.php', ['php2html']);
+    gulp.watch('src/php/**/*.php', ['php2html','reload']);
     // Watch .js files
     gulp.watch('src/js/*.js', ['scripts']);
     // Watch .scss files
@@ -66,3 +75,4 @@ gulp.task('watch', function () {
 });
 // Default Task
 gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('php-mode',['browser-sync','php-watch']);
