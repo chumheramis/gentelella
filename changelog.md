@@ -31,4 +31,7 @@ Earlier there were no changelog at all and we have introduced one now and we wil
 * Add fixed footer functionalities
 
 ### 1.3.1 - 
-* All template assets are transfered ni one centralized location [assets]
+* All assets (js,css,img) moved to [assets] folder.
+* All dev files (js,scss,php) moved to src folder/
+* Add gulp php autocompiler
+* bower files are transfered in [assets/plugins] folder.
