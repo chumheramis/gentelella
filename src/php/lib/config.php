@@ -1,6 +1,6 @@
 <?php
 $config = array();
 
-$config['site-title'] = 'FaceBook';
+$config['site-title'] = 'Gentellela Alela';
 
-$config['body-class'] = 'nav-md test';
+$config['body-class'] = 'nav-md';

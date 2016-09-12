@@ -7,9 +7,7 @@ var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 require('gulp-grunt')(gulp); // add all the gruntfile tasks to gulp
-
 var DEST = 'assets/';
-
 gulp.task('scripts', function () {
     return gulp.src('src/js/*.js')
             .pipe(concat('custom.js'))
